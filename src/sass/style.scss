@@ -1,4 +1,38 @@
+@import 'normalize';
+
+$break: 880px;
+
 body {
-  font-size: 60px;
-  background-color: red;
+  background: linear-gradient( 135deg, #92FFC0 10%, #004399 100%);
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+
+  @media (min-width: $break) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.container__item {
+  margin: 2%;
+  border-radius: 4px;
+  padding: 2rem;
+  
+  @media (min-width: $break) {
+    width: 100%;
+  }
+}
+
+.question {
+  background-color: #f7f7f7;
+}
+
+.facts {
+  background-color: #e1e5ff;
 }
