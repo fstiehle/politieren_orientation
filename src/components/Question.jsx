@@ -10,6 +10,18 @@ const Question = ({question}) => {
       meta.push(<Category key={index} name={element}/>)
     });
   }
+  let pro = []
+  if (question.pro && question.pro.length > 0) {
+    question.pro.forEach((element, index) => {
+      pro.push(<li key={index}>{element}</li>)
+    });
+  }
+  let contra = []
+  if (question.contra && question.contra.length > 0) {
+    question.contra.forEach((element, index) => {
+      contra.push(<li key={index}>{element}</li>)
+    });
+  }
 
   return (
     <div className="container">
@@ -20,8 +32,18 @@ const Question = ({question}) => {
       </div>
 
       <div className="container__item facts">
-        <h1>{question.pro || "missing"}</h1>
-        <p>{question.contra || "missing"}</p>
+        <div className="facts__pro">
+          <h4>Pro</h4>
+          <ul>
+            {pro}
+          </ul>
+        </div>
+        <div className="facts__contra">
+          <h4>Contra</h4>
+          <ul>
+            {contra}
+          </ul>
+        </div>
       </div>
     </div>
   )

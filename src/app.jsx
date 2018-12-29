@@ -8,4 +8,4 @@ ReactDOM.render(
   <HashRouter>
     <Index />
   </HashRouter>,
-  document.getElementById("content"));
+  document.getElementById("optimat"));
