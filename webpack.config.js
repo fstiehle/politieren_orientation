@@ -1,11 +1,16 @@
 module.exports = {
 
   context: __dirname + "/src",
-  entry: "./app",
+  entry: "./app.jsx",
   output: {
 		path: __dirname + "/dist",
 		filename: "bundle.js"
-	},
+  },
+  devServer: {
+    contentBase: __dirname + "/dist",
+    compress: true,
+    port: 9000
+  },
 
   module: {
     rules: [
@@ -19,9 +24,9 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-            "style-loader", // creates style nodes from JS strings
-            "css-loader", // translates CSS into CommonJS
-            "sass-loader" // compiles Sass to CSS, using Node Sass by default
+          "style-loader",
+          "css-loader", // translates CSS into CommonJS
+          "sass-loader" // compiles Sass to CSS, using Node Sass by default
         ]
       }
     ]
