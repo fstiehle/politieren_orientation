@@ -1,21 +1,51 @@
 {
   "0": {
-    "title": "Ehegattensplitting",
-    "content": "Das Ehegattensplitting soll in seiner jetzigen Form beibehalten werden.",
-    "category": ["Umwelt", "Steuern"],
+    "title": "Erbschaftssteuer",
+    "content": "Die Steuer auf große Erbschaften sollte erhöht werden.",
+    "category": ["Wirtschaft & Steuern"],
     "pro": ["Fact", "Fact", "Fact", "Fact"],
     "contra": ["Fact", "Fact", "Fact", "Fact"] 
   },
   "1": {
-    "title": "wini sucks1?" 
+    "title": "Spitzensteuersatz",
+    "content": "Der Spitzensteuersatz sollte erhöht werden.",
+    "category": ["Wirtschaft & Steuern"],
+    "pro": ["Fact", "Fact", "Fact", "Fact"],
+    "contra": ["Fact", "Fact", "Fact", "Fact"] 
   },
   "2": {
-    "title": "wini sucks2?" 
+    "title": "Doppelte Staatsbürgerschaft",
+    "content": "Die doppelte Staatsbürgerschaft ist abzulehnen.",
+    "category": ["Inneres & Recht"],
+    "pro": ["Fact", "Fact", "Fact", "Fact"],
+    "contra": ["Fact", "Fact", "Fact", "Fact"] 
   },
   "3": {
-    "title": "wini sucks3?" 
+    "title": "Islam und Werteordnung",
+    "content": "Der Islam ist nicht mit der Werteordnung der Bundesrepublik vereinbar.",
+    "category": ["Familie & Gesellschaft"],
+    "pro": ["Fact", "Fact", "Fact", "Fact"],
+    "contra": ["Fact", "Fact", "Fact", "Fact"] 
   },
   "4": {
-    "title": "wini sucks4?" 
+    "title": "Klimawandel",
+    "content": "Der Staat soll mehr gegen den Klimawandel tun als jetzt.",
+    "category": ["Umwelt & Landwirtschaf"],
+    "pro": ["Fact", "Fact", "Fact", "Fact"],
+    "contra": ["Fact", "Fact", "Fact", "Fact"] 
+  },
+  "5": {
+    "title": "Abschiebung",
+    "content": "Straffällig gewordene Asylbewerber sollten in jedem Fall abgeschoben werden.",
+    "category": ["Einwanderung"],
+    "pro": ["Fact", "Fact", "Fact", "Fact"],
+    "contra": ["Fact", "Fact", "Fact", "Fact"] 
+  },
+  "6": {
+    "title": "Bürgerversicherung",
+    "content": "Die privaten Krankenversicherungen und Krankenkassen sollten durch eine Bürgerversicherung ersetzt werden.",
+    "category": ["Gesundheit"],
+    "pro": ["Fact", "Fact", "Fact", "Fact"],
+    "contra": ["Fact", "Fact", "Fact", "Fact"] 
   }
 }
