@@ -6,12 +6,12 @@ import { Redirect } from 'react-router-dom';
 import Calculator from '../Calculator.js';
 
 const party_colors = {
-  'AFD' : 'blue',
-  'CDU' : 'black',
-  'FDP' : 'yellow',
-  'GRÜNE' : 'green',
-  'LINKE' : 'red',
-  'SPD' : 'lightred'
+  'AFD' : '#009EE0',
+  'CDU' : '#000000',
+  'FDP' : '#FFED00',
+  'GRÜNE' : '#46962B',
+  'LINKE' : '#E20613',
+  'SPD' : '#E2001A'
 }
 
 const horizontalBarChartData = {
