@@ -12,14 +12,15 @@ export default class CategoryChart extends React.Component {
   getChartData(result) {
     const list = []
     
-    Object.keys(Categories).forEach(cat => {
-      const filtered = Calculator.filterAnswers(cat, result);
+    Object.keys(Categories).forEach(category => {
+
+      const filtered = Calculator.filterAnswers(category, result);
       const deviation = Calculator.calculateAllDeviations(filtered);
       const percentage = Calculator.deviationPercentage(deviation);
 
       list.push(
-        <div key={cat}>
-          <Icon name={cat}></Icon>
+        <div class="result-category-chart__item" key={category}>
+          <Icon name={category}></Icon>
           <div> {percentage[0][0]}: {percentage[0][1]}% </div>
         </div>
         );
@@ -28,13 +29,23 @@ export default class CategoryChart extends React.Component {
     return list;
   }
 
-  
-
   render() {
     const list = this.getChartData(this.props.result);
+
     return(
-      <div>
-        {list}
+      <div className="result-category-chart__wrapper">
+
+        <div className="result-category-chart__heading">
+
+          <div className="result-category-chart__title">
+            Höchste Übereinstimmung in den Kategorien
+          </div>
+
+        </div>
+        <div className="result-category-chart">
+          {list}
+        </div>
+
       </div>
     );
   }

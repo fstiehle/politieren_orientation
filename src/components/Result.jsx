@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import BarChart from './BarChart.jsx';
 import CategoryChart from './CategoryChart.jsx';
-import { Redirect } from 'react-router-dom'
+import PartyChart from './PartyChart.jsx';
 import Calculator from '../Calculator.js';
 
 export default class Result extends React.Component {
@@ -40,7 +40,7 @@ export default class Result extends React.Component {
 
           <div className="container__wrap">
             <div className="container__item">
-              <BarChart result={deviations}></BarChart>
+              <PartyChart result={answers_user}></PartyChart>
             </div>
           </div>
         </div>

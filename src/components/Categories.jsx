@@ -1,20 +1,16 @@
-import React from "react";
-import ReactDOM from "react-dom";
-
 const Categories = {
-  'soziales': 'Familie & Gesellschaft',
-  'aussen': '',
-  'bildung': '',
-  'digitales': '',
-  'gesellschaft': '',
+  'soziales': 'Arbeit & Soziales',
+  'aussen': 'Außenpolitik',
+  'bildung': 'Bildung & Forschung',
+  'digitales': 'Digitales, Kultur & Medien',
+  'gesellschaft': 'Familie & Gesellschaft',
   'gesundheit': 'Gesundheit',
-  'einwanderung': '',
-  'infrastruktur': '',
-  'inneres': '',
-  'sicherheit': '',
+  'einwanderung': 'Einwanderung',
+  'infrastruktur': 'Infrastruktur & Verkehr',
+  'inneres': 'Inneres & Recht',
+  'sicherheit': 'Sicherheit & Verteidigung',
   'umwelt': 'Umwelt & Landwirtschaft',
   'wirtschaft': 'Wirtschaft & Steuern'
 };
-
 
 export default Categories

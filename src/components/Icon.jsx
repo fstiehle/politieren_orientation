@@ -1,6 +1,6 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import SVG from "react-svg-inline"
+import Categories from './Categories.jsx';
 
 import soziales from '../svg/cat-icon-arbeit.svg';
 import aussen from '../svg/cat-icon-aussenpolitik.svg';
@@ -57,7 +57,7 @@ const Icon = ({name}) => {
   }
 
   return (
-    <div id={name} className="icon {name}">
+    <div data-tooltip={Categories[name]} id={name} className={"result-icon " + name}>
       <SVG width='100' height='100' svg={icon} />
     </div>
   );

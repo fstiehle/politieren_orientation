@@ -15,7 +15,6 @@ export default class Calculator {
   }
 
   static calculateDeviation(answers_user, answers_party) {
-    console.log( answers_user );
     const result = [];
     answers_user.forEach( ( answer, index ) => {
       result[index] = Math.abs( answers_party[index] - answer );
@@ -26,14 +25,34 @@ export default class Calculator {
 
   static calculateAllDeviations(answers_user) {
     const deviations = {
-      'afd' : Calculator.calculateDeviation(answers_user, AFD),
-      'cdu' : Calculator.calculateDeviation(answers_user, CDU),
-      'fdp' : Calculator.calculateDeviation(answers_user, FDP),
-      'gruene' : Calculator.calculateDeviation(answers_user, GRUENE),
-      'linke' : Calculator.calculateDeviation(answers_user, LINKE)
+      'AFD' : Calculator.calculateDeviation(answers_user, AFD),
+      'CDU' : Calculator.calculateDeviation(answers_user, CDU),
+      'FDP' : Calculator.calculateDeviation(answers_user, FDP),
+      'GRÜNE' : Calculator.calculateDeviation(answers_user, GRUENE),
+      'LINKE' : Calculator.calculateDeviation(answers_user, LINKE)
     }
 
     return deviations;
+  }
+
+  static calculateDeviationForParty(answers_user, party) {
+    switch (party) {
+      case 'AFD':
+        return { 'AFD': Calculator.calculateDeviation(answers_user, AFD) };
+
+      case 'CDU':
+        return { 'CDU': Calculator.calculateDeviation(answers_user, CDU) };
+      
+      case 'FDP':
+        return { 'FDP': Calculator.calculateDeviation(answers_user, FDP) };
+      
+      case 'GRÜNE':
+        return { 'GRÜNE': Calculator.calculateDeviation(answers_user, GRUENE) };
+      
+      case 'LINKE':
+        return { 'LINKE': Calculator.calculateDeviation(answers_user, LINKE) };
+    }
+    return false;
   }
 
   static deviationPercentage(result) {
@@ -64,6 +83,9 @@ export default class Calculator {
       return false;
     }
 
+    // Deep copy
+    answers = Array.from(answers);
+
     if ( !isArray(categories) ) {
       categories = [categories];
     }
@@ -71,7 +93,7 @@ export default class Calculator {
     answers.forEach((_, index) => {
       
       Questions[index]['category'].forEach(category => {
-        
+
         categories.forEach(allowed_cat => {
           const name = Categories[allowed_cat];
 

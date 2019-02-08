@@ -1,0 +1,12 @@
+.result-category-chart,
+.result-party-chart {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.result-category-chart__item,
+.result-party-chart__item {
+  margin: 20px;
+  width: 100px;
+  text-align: center;
+}
