@@ -5,25 +5,20 @@ import Scatter from "react-chartjs-2";
 import { Redirect } from 'react-router-dom';
 import Calculator from '../Calculator.js';
 
-const colors = {
-  'afd' : '',
-  'cdu' : '',
-  'fdp' : '',
-  'gruene' : '',
-  'linke' : ''
+const party_colors = {
+  'AFD' : 'blue',
+  'CDU' : 'black',
+  'FDP' : 'yellow',
+  'GRÜNE' : 'green',
+  'LINKE' : 'red',
+  'SPD' : 'lightred'
 }
 
 const horizontalBarChartData = {
   labels: [],
   datasets: [{
-    label: 'Zustimmung',
-    backgroundColor: [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
+    label: 'Übereinstimmung %',
+    backgroundColor: [],
     borderWidth: 0,
     data: [ ]
   }],
@@ -39,12 +34,20 @@ export default class Result extends React.Component {
 
     const labels = [];
     const data = [];
+
     Object.values(deviation).forEach(element => {
       labels.push(element[0]);
-      data.push(element[1]);
+      data.push( Math.round(element[1]) );
+    });
+
+    const colors = [];
+    // match colors to same order
+    labels.forEach(element => {
+      colors.push(party_colors[element]);
     });
 
     horizontalBarChartData.datasets[0].data = data;
+    horizontalBarChartData.datasets[0].backgroundColor = colors;
     horizontalBarChartData.labels = labels;
     return horizontalBarChartData;
   }
@@ -56,7 +59,9 @@ export default class Result extends React.Component {
         options={{ scales: { xAxes: [{
           ticks: {
               beginAtZero: true
-          }}]}}}>
+          }}]},
+          'legend': { onClick: () => {} }
+          }}>
         </HorizontalBar>
     );
   }
