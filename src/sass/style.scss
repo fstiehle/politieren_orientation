@@ -1,9 +1,13 @@
 @import 'normalize';
 @import 'typography';
 @import 'categories';
-@import 'category-chart';
+@import 'chart';
 
 $break: 880px;
+
+button > * {
+  pointer-events: none;
+}
 
 .container {
   min-height: 100vh;
@@ -105,4 +109,17 @@ button {
     cursor: pointer;
     background-color: #11366d;
   }
+}
+
+.no-button,
+.no-button:hover,
+.no-button:focus,
+.no-button:active {
+  background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
 }

@@ -15,7 +15,14 @@ import sicherheit from '../svg/cat-icon-sicherheit.svg';
 import umwelt from '../svg/cat-icon-umwelt.svg';
 import wirtschaft from '../svg/cat-icon-wirtschaft.svg';
 
-const Icon = ({name}) => {
+import afd from '../svg/logo-afd-c.svg';
+import cdu from '../svg/logo-cducsu-c.svg';
+import fdp from '../svg/logo-fdp-c.svg';
+import gruene from '../svg/logo-gruene-c.svg';
+import linke from '../svg/logo-linke-c.svg';
+import spd from '../svg/logo-spd-c.svg';
+
+const Icon = ({name, tooltip}) => {
   let icon;
   switch (name) {
     case 'soziales':
@@ -54,10 +61,29 @@ const Icon = ({name}) => {
     case 'wirtschaft':
       icon = wirtschaft;
       break;
+
+    case 'AFD':
+      icon = afd;
+      break;
+    case 'CDU':
+      icon = cdu;
+      break;
+    case 'FDP':
+      icon = fdp;
+      break;
+    case 'GRÜNE':
+      icon = gruene;
+      break;
+    case 'LINKE':
+      icon = linke;
+      break;
+    case 'SPD':
+      icon = spd;
+      break;
   }
 
   return (
-    <div data-tooltip={Categories[name]} id={name} className={"result-icon " + name}>
+    <div data-tooltip={tooltip} id={name} className={"result-icon " + name}>
       <SVG width='100' height='100' svg={icon} />
     </div>
   );

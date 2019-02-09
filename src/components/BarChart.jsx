@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import { HorizontalBar } from "react-chartjs-2";
 import Scatter from "react-chartjs-2";
 import { Redirect } from 'react-router-dom';
@@ -54,7 +53,7 @@ export default class Result extends React.Component {
 
   render() {
     return(
-      <HorizontalBar 
+      <HorizontalBar height="250px"
         data={this.getChartData(this.props.result)}
         options={{ scales: { xAxes: [{
           ticks: {

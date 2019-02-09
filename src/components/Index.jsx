@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import { Switch, Route } from 'react-router-dom'
 import Optimat from './Optimat.jsx'
 import Result from './Result.jsx'

@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import BarChart from './BarChart.jsx';
 import CategoryChart from './CategoryChart.jsx';
 import PartyChart from './PartyChart.jsx';

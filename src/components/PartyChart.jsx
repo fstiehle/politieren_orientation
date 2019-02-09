@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import Calculator from '../Calculator.js'
 import Categories from './Categories.jsx'
 import Icon from './Icon.jsx'
@@ -26,6 +25,37 @@ export default class PartyChart extends React.Component {
     }
   }
 
+  handlePartySelect(e) {
+
+    if ( !e.target.id ) {
+      return;
+    }
+
+    const selected = parties.findIndex( (value) => value == e.target.id );
+
+    if ( !selected ) {
+      return;
+    }
+
+    this.setState( { party: selected } );
+  }
+
+  getChartHeader() {
+    const list = [];
+
+    parties.forEach(party => {
+
+      list.push(
+        <button style={ { zIndex: 2} } id={party} onClick={this.handlePartySelect.bind(this)} className="no-button result-party-chart__selection__item" key={party}>
+          <Icon name={party} tooltip={party}></Icon>
+        </button>
+        );
+    
+    });
+
+    return list;
+  }
+
   getChartData(result) {
     const party = this.state.party;
     const list = [];
@@ -38,7 +68,7 @@ export default class PartyChart extends React.Component {
 
       list.push(
         <div className="result-party-chart__item" key={category}>
-          <Icon name={category}></Icon>
+          <Icon tooltip={Categories[category]} name={category}></Icon>
           <div> {percentage[0][1]}% </div>
         </div>
         );
@@ -48,6 +78,7 @@ export default class PartyChart extends React.Component {
   }
 
   render() {
+    const header = this.getChartHeader();
     const list = this.getChartData(this.props.result);
     
     return(
@@ -58,7 +89,9 @@ export default class PartyChart extends React.Component {
             Höchste Übereinstimmung in den Parteien
           </div>
 
-          {parties[this.state.party]}
+          <div className="result-party-chart__selection">
+            {header}
+          </div>
 
         </div>
         <div className="result-party-chart">

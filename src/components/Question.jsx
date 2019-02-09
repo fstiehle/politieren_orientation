@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import Buttons from "./Buttons.jsx";
 
 const Category = ({name}) => (<span className={name.toLowerCase()}>{name}</span>)

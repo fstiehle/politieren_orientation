@@ -1,5 +1,4 @@
 import React from "react";
-import ReactDOM from "react-dom";
 import Calculator from '../Calculator.js'
 import Categories from './Categories.jsx'
 import Icon from './Icon.jsx'
