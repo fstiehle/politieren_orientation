@@ -15,9 +15,16 @@
   display: flex;
 }
 
+.category-selection__button,
 .result-party-chart__selection__item {
   cursor: pointer;
 }
-.result-party-chart__selection__item--active {
-  border: 4px solid red;
+
+.result-party-chart__selection__item--active,
+.result-party-chart__selection__item--active:focus,
+.result-party-chart__selection__item--active:hover,
+.category-selection__button--active,
+.category-selection__button--active:focus,
+.category-selection__button--active:hover {
+  border-bottom: 2px solid red;
 }

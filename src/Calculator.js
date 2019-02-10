@@ -6,6 +6,7 @@ import AFD from '../data/answer_afd.json';
 import CDU from '../data/answer_cdu.json';
 import FDP from '../data/answer_fdp.json';
 import GRUENE from '../data/answer_gruene.json';
+import SPD from '../data/answer_spd.json';
 import LINKE from '../data/answer_linke.json';
 
 export default class Calculator {
@@ -29,7 +30,8 @@ export default class Calculator {
       'CDU' : Calculator.calculateDeviation(answers_user, CDU),
       'FDP' : Calculator.calculateDeviation(answers_user, FDP),
       'GRÜNE' : Calculator.calculateDeviation(answers_user, GRUENE),
-      'LINKE' : Calculator.calculateDeviation(answers_user, LINKE)
+      'LINKE' : Calculator.calculateDeviation(answers_user, LINKE),
+      'SPD' : Calculator.calculateDeviation(answers_user, SPD)
     }
 
     return deviations;
@@ -51,6 +53,9 @@ export default class Calculator {
       
       case 'LINKE':
         return { 'LINKE': Calculator.calculateDeviation(answers_user, LINKE) };
+      
+      case 'SPD':
+        return { 'SPD': Calculator.calculateDeviation(answers_user, SPD) };
     }
     return false;
   }
@@ -70,14 +75,14 @@ export default class Calculator {
       const total_deviation = deviation.reduce((a, b) => a + b, 0);
 
       // Deviation in %
-      deviations[party] = 100 - total_deviation / (entries.length * 4) * 100;
+      deviations[party] = Math.round( 100 - total_deviation / (entries.length * 4) * 100 );
     }
 
     // Sort for best match
     return Object.entries(deviations).sort((a, b) => b[1] - a[1]);
   }
 
-  static filterAnswers(categories, answers) {
+  static filterAnswers(allowedCats, answers) {
     
     if ( !isArray(answers) ) {
       return false;
@@ -86,22 +91,17 @@ export default class Calculator {
     // Deep copy
     answers = Array.from(answers);
 
-    if ( !isArray(categories) ) {
-      categories = [categories];
+    if ( !isArray(allowedCats) ) {
+      allowedCats = [allowedCats];
     }
 
     answers.forEach((_, index) => {
       
       Questions[index]['category'].forEach(category => {
 
-        categories.forEach(allowed_cat => {
-          const name = Categories[allowed_cat];
-
-          if ( name != category ) {
-            delete answers[index];
-          }
-          
-        });
+        if ( !allowedCats.includes(category) ) {
+          delete answers[index];
+        }
 
       });
         

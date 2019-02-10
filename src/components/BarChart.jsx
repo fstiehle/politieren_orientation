@@ -53,7 +53,7 @@ export default class Result extends React.Component {
 
   render() {
     return(
-      <HorizontalBar height="250px"
+      <HorizontalBar
         data={this.getChartData(this.props.result)}
         options={{ scales: { xAxes: [{
           ticks: {

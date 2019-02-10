@@ -19,7 +19,7 @@ export default class CategoryChart extends React.Component {
 
       list.push(
         <div class="result-category-chart__item" key={category}>
-          <Icon name={category}></Icon>
+          <Icon name={category} tooltip={Categories[category]}></Icon>
           <div> {percentage[0][0]}: {percentage[0][1]}% </div>
         </div>
         );

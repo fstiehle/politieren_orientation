@@ -1,0 +1,13 @@
+
+.result-container__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin: 40px auto;
+
+  @media (min-width: $break) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+}

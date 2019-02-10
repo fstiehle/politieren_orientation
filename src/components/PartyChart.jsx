@@ -33,20 +33,24 @@ export default class PartyChart extends React.Component {
 
     const selected = parties.findIndex( (value) => value == e.target.id );
 
-    if ( !selected ) {
+    if ( selected < 0 ) {
       return;
     }
 
     this.setState( { party: selected } );
   }
 
-  getChartHeader() {
+  getChartHeader() {  
     const list = [];
 
     parties.forEach(party => {
 
+      const htmlClass = parties[this.state.party] == party ? "result-party-chart__selection__item--active" : "";
+
       list.push(
-        <button style={ { zIndex: 2} } id={party} onClick={this.handlePartySelect.bind(this)} className="no-button result-party-chart__selection__item" key={party}>
+        <button id={party} onClick={this.handlePartySelect.bind(this)} 
+          className={ htmlClass + " no-button result-party-chart__selection__item" }
+          key={party}>
           <Icon name={party} tooltip={party}></Icon>
         </button>
         );
