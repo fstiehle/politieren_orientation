@@ -3,49 +3,42 @@
     "title": "Erbschaftssteuer",
     "content": "Die Steuer auf große Erbschaften sollte erhöht werden.",
     "category": ["wirtschaft"],
-    "pro": ["Fact", "Fact", "Fact", "Fact"],
-    "contra": ["Fact", "Fact", "Fact", "Fact"] 
+    "html": "<p>\r\nErbschaftssteuer zahlt jeder, der ein Erbe antritt. Das Erbe kann Geld,\r\n ein Unternehmen oder eine Immobilie sein. Bei der Berechnung der \r\n       Erbschaftssteuer kommt es auf die H\u00F6he des Erbes und den Verwandtschaftsgrad an. \r\n Bei einem Erbe gibt es einen bestimmten Steuerfreibetrag,\r\n bis zu diesem Betrag muss keine Erbschaftsteuer gezahlt werden. \r\n <img src='https:\/\/sk-7ad1.kxcdn.com\/thumbs\/erbschaftssteuer\/erbschaftssteuer-2154x1077-min.jpg'>(Quelle: <a href='https:\/\/www.steuerklassen.com\/erbschaftssteuer\/'>steuerklassen.com\/erbschaftssteuer<\/a>) \r\n<\/p>"
   },
   "1": {
     "title": "Spitzensteuersatz",
     "content": "Der Spitzensteuersatz sollte erhöht werden.",
     "category": ["wirtschaft"],
-    "pro": ["Fact", "Fact", "Fact", "Fact"],
-    "contra": ["Fact", "Fact", "Fact", "Fact"] 
+    "html": "" 
   },
   "2": {
     "title": "Doppelte Staatsbürgerschaft",
     "content": "Die doppelte Staatsbürgerschaft ist abzulehnen.",
     "category": ["inneres"],
-    "pro": ["Fact", "Fact", "Fact", "Fact"],
-    "contra": ["Fact", "Fact", "Fact", "Fact"] 
+    "html": ""
   },
   "3": {
     "title": "Islam und Werteordnung",
     "content": "Der Islam ist nicht mit der Werteordnung der Bundesrepublik vereinbar.",
     "category": ["gesellschaft"],
-    "pro": ["Fact", "Fact", "Fact", "Fact"],
-    "contra": ["Fact", "Fact", "Fact", "Fact"] 
+    "html": ""
   },
   "4": {
     "title": "Klimawandel",
     "content": "Der Staat soll mehr gegen den Klimawandel tun als jetzt.",
     "category": ["umwelt"],
-    "pro": ["Fact", "Fact", "Fact", "Fact"],
-    "contra": ["Fact", "Fact", "Fact", "Fact"] 
+    "html": ""
   },
   "5": {
     "title": "Abschiebung",
     "content": "Straffällig gewordene Asylbewerber sollten in jedem Fall abgeschoben werden.",
     "category": ["einwanderung"],
-    "pro": ["Fact", "Fact", "Fact", "Fact"],
-    "contra": ["Fact", "Fact", "Fact", "Fact"] 
+    "html": ""
   },
   "6": {
     "title": "Bürgerversicherung",
     "content": "Die privaten Krankenversicherungen und Krankenkassen sollten durch eine Bürgerversicherung ersetzt werden.",
     "category": ["gesundheit"],
-    "pro": ["Fact", "Fact", "Fact", "Fact"],
-    "contra": ["Fact", "Fact", "Fact", "Fact"] 
+    "html": "" 
   }
 }

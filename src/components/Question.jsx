@@ -1,25 +1,14 @@
 import React from "react";
 import Buttons from "./Buttons.jsx";
+import Categories from "./Categories.jsx";
+import Icon from "./Icon.jsx";
 
-const Category = ({name}) => (<span className={name.toLowerCase()}>{name}</span>)
+const Question = ({qid, total, question, handleButton}) => {
 
-const Question = ({question, handleButton}) => {
   let meta = []
   if (question.category && question.category.length > 0) {
     question.category.forEach((element, index) => {
-      meta.push(<Category key={index} name={element}/>)
-    });
-  }
-  let pro = []
-  if (question.pro && question.pro.length > 0) {
-    question.pro.forEach((element, index) => {
-      pro.push(<li key={index}>{element}</li>)
-    });
-  }
-  let contra = []
-  if (question.contra && question.contra.length > 0) {
-    question.contra.forEach((element, index) => {
-      contra.push(<li key={index}>{element}</li>)
+      meta.push(<Icon key={index} name={element} tooltip={Categories[element]}></Icon>)
     });
   }
 
@@ -27,7 +16,13 @@ const Question = ({question, handleButton}) => {
     <div className="test-container">
       <div className="test-container__wrap">
         <div className="test-container__item question">
-          <div className="test-meta">{meta}</div>
+          <div className="test-meta">
+            {meta}
+            <span className="test-meta__number">
+            {qid + 1} / {total}
+            </span>
+            
+          </div>
           <h1>{question.title || "missing"}</h1>
           <p>{question.content || "missing"}</p>
         </div>
@@ -36,21 +31,7 @@ const Question = ({question, handleButton}) => {
 
       <div className="test-container__wrap">
         <div className="test-container__item facts">
-          <div 
-            style={{"textAlign": "center", "marginBottom": "10px"}}
-            >Hallo, hier sind die Fakten, lieber BILD-Leser!</div>
-          <div className="test-facts__item">
-            <h4>Pro</h4>
-            <ul>
-              {pro}
-            </ul>
-          </div>
-          <div className="test-facts__item">
-            <h4>Contra</h4>
-            <ul>
-              {contra}
-            </ul>
-          </div>
+          <div dangerouslySetInnerHTML={{__html: question.html}} />
         </div>
       </div>
     </div>

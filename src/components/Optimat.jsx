@@ -47,6 +47,8 @@ export default class Optimat extends React.Component {
     return(
       <div>
         <Question 
+          qid={this.state.id}
+          total={this.maxQuestions}
           question={question} 
           handleButton={this.handleButton.bind(this)} 
         />

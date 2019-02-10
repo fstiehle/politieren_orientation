@@ -40,7 +40,6 @@ export default class Result extends React.Component {
     const toFilter = this.state.categoriesSelected;
     const filtered = Calculator.filterAnswers( toFilter, answers_user );
     
-    console.log(filtered)
     const deviations = Calculator.calculateAllDeviations( filtered );
 
     return(
