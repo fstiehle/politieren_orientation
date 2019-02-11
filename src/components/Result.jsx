@@ -5,6 +5,7 @@ import PartyChart from './PartyChart.jsx';
 import CategorySelection from './CategorySelection.jsx';
 import Calculator from '../Calculator.js';
 import Categories from './Categories.jsx';
+import ls from 'local-storage'
 
 export default class Result extends React.Component {
   constructor(props) {
@@ -35,11 +36,9 @@ export default class Result extends React.Component {
   }
 
   render() {
-    //const answers_user = this.props.location.state.result;
-    const answers_user = [ 0, 1, 2, -1, 2, 1, 2 ];
+    const answers_user = this.props.match.params.r.split(",");
     const toFilter = this.state.categoriesSelected;
     const filtered = Calculator.filterAnswers( toFilter, answers_user );
-    
     const deviations = Calculator.calculateAllDeviations( filtered );
 
     return(

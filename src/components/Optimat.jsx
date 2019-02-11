@@ -2,6 +2,7 @@ import React from "react";
 import { Redirect } from 'react-router-dom'
 import Questions from '../../data/questions.json';
 import Question from './Question.jsx';
+import ls from 'local-storage'
 
 export default class Optimat extends React.Component {
   constructor(props) {
@@ -19,7 +20,7 @@ export default class Optimat extends React.Component {
     const id = this.props.match.params.id || 0
     const value = event.target.value;
     this.setState(prevState => {
-      prevState.choice[id] = value
+      prevState.choice[id] = value,
       prevState.id = prevState.id + 1
       prevState.redirect = true
       return prevState
@@ -34,7 +35,7 @@ export default class Optimat extends React.Component {
     if (this.state.id >= this.maxQuestions) {
       return <Redirect 
         to={{
-          pathname: "/result",
+          pathname: "/result/" + this.state.choice,
           state: {result : this.state.choice}
         }}
       />

@@ -7,7 +7,7 @@ const Index = () => (
   <Switch>
     <Route path="/question/:id" component={Optimat} />
     <Route path="/question" component={Optimat} />
-    <Route path="/result" component={Result} />
+    <Route path="/result/:r" component={Result} />
   </Switch>
 )
 
