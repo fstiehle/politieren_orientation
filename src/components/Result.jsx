@@ -79,8 +79,8 @@ export default class Result extends React.Component {
         </div>
 
         <div class="result-container__wrapper share">
-          <a target="_blank" class="fb" href={"https://www.facebook.com/sharer/sharer.php?u=" + buildCurrentUrl() + this.props.match.url}>Share on Facebook</a>
-          <a target="_blank" class="twitter" href={"https://twitter.com/home?status=" + buildCurrentUrl() + this.props.match.url}>Share on Twitter</a>
+          <a target="_blank" class="fb" href={"https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(buildCurrentUrl() + this.props.match.url)}>Share on Facebook</a>
+          <a target="_blank" class="twitter" href={"https://twitter.com/home?status=" + encodeURIComponent(buildCurrentUrl() + this.props.match.url)}>Share on Twitter</a>
         </div>
 
       </div>
