@@ -47,6 +47,8 @@ export default class Result extends React.Component {
 
     return(
       <div>
+        <h1>Auswertung</h1>
+
         <div class="result-container__wrapper">
           <div className="result-container category-selection">
             <CategorySelection 

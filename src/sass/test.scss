@@ -33,26 +33,3 @@
   display: flex;
   margin-top: 1rem;
 }
-
-button.test-button {
-  font-size: 1rem;
-  line-height: 1.6;
-  font-weight: 700;
-  padding: 1rem 1rem;
-  letter-spacing: 0.1rem;
-  text-transform: uppercase;
-  color: white;
-  background-color: #006c8b;
-  border-radius: 4px;
-  text-align: center;
-  margin-right: 0.3rem;
-
-  &.skip {
-    background-color: rgba(56, 116, 179, 0.5);
-  }
-
-  &:hover {
-    cursor: pointer;
-    background-color: #11366d;
-  }
-}

@@ -24,15 +24,16 @@ const Question = ({qid, total, question, handleButton}) => {
 
           <div class="these">
             <div class="icon-tags"> {meta} </div>
+          
+            <div class="text"> 
+              <h1>{question.title || "missing"}</h1>
+              <p>{question.content || "missing"}</p>
+            </div>
           </div>
 
-          <div class="text"> 
-            <h1>{question.title || "missing"}</h1>
-            <p>{question.content || "missing"}</p>
-          </div>
-
+          <Buttons click={handleButton}/>
         </div>
-        <Buttons click={handleButton}/>
+        
       </div>
 
       <div className="test-container__wrap right-col">
