@@ -1,15 +1,15 @@
 {
   "0": {
+    "title": "Braunkohle",
+    "content": "In Deutschland soll auch zukünftig Braunkohle abgebaut werden dürfen.",
+    "category": ["umwelt"],
+    "html": ""
+  },
+  "1": {
     "title": "Erbschaftssteuer",
     "content": "Die Steuer auf große Erbschaften sollte erhöht werden.",
     "category": ["wirtschaft"],
     "html": "<p>\r\nErbschaftssteuer zahlt jeder, der ein Erbe antritt. Das Erbe kann Geld,\r\n ein Unternehmen oder eine Immobilie sein. Bei der Berechnung der \r\n       Erbschaftssteuer kommt es auf die H\u00F6he des Erbes und den Verwandtschaftsgrad an. \r\n Bei einem Erbe gibt es einen bestimmten Steuerfreibetrag,\r\n bis zu diesem Betrag muss keine Erbschaftsteuer gezahlt werden. \r\n <img src='https:\/\/sk-7ad1.kxcdn.com\/thumbs\/erbschaftssteuer\/erbschaftssteuer-2154x1077-min.jpg'>(Quelle: <a href='https:\/\/www.steuerklassen.com\/erbschaftssteuer\/'>steuerklassen.com\/erbschaftssteuer<\/a>) \r\n<\/p>"
-  },
-  "1": {
-    "title": "Spitzensteuersatz",
-    "content": "Der Spitzensteuersatz sollte erhöht werden.",
-    "category": ["wirtschaft"],
-    "html": "" 
   },
   "2": {
     "title": "Doppelte Staatsbürgerschaft",
@@ -18,27 +18,129 @@
     "html": ""
   },
   "3": {
-    "title": "Islam und Werteordnung",
-    "content": "Der Islam ist nicht mit der Werteordnung der Bundesrepublik vereinbar.",
-    "category": ["gesellschaft"],
-    "html": ""
-  },
-  "4": {
     "title": "Klimawandel",
     "content": "Der Staat soll mehr gegen den Klimawandel tun als jetzt.",
     "category": ["umwelt"],
     "html": ""
   },
-  "5": {
+  "4": {
     "title": "Abschiebung",
     "content": "Straffällig gewordene Asylbewerber sollten in jedem Fall abgeschoben werden.",
     "category": ["einwanderung"],
     "html": ""
   },
+  "5": {
+    "title": "Spitzensteuersatz",
+    "content": "Der Spitzensteuersatz sollte erhöht werden.",
+    "category": ["wirtschaft"],
+    "html": "" 
+  },
   "6": {
     "title": "Bürgerversicherung",
     "content": "Die privaten Krankenversicherungen und Krankenkassen sollten durch eine Bürgerversicherung ersetzt werden.",
     "category": ["gesundheit"],
+    "html": ""
+  },
+  "7": {
+    "title": "Videoüberwachung",
+    "content": "Die Videoüberwachung im öffentlichen Raum soll ausgeweitet werden.",
+    "category": ["sicherheit"],
     "html": "" 
+  },
+  "8": {
+    "title": "Abschaffung Frauenquote",
+    "content": "Die Frauenquote für die Aufsichtsräte börsennotierter Unternehmen soll abgeschafft werden.",
+    "category": ["gesellschaft"],
+    "html": "" 
+  },
+  "9": {
+    "title": "Elternunabhängiges Bafög",
+    "content": "BAföG soll generell unabhängig vom Einkommen der Eltern gezahlt werden.",
+    "category": ["bildung"],
+    "html": "" 
+  },
+  "10": {
+    "title": "Verkauf von Cannabis",
+    "content": "Der kontrollierte Verkauf von Cannabis soll generell erlaubt sein.",
+    "category": ["inneres"],
+    "html": ""
+  },
+  "11": {
+    "title": "Tempolimit",
+    "content": "Auf deutschen Autobahnen sollte ein generelles Tempolimit gelten.",
+    "category": ["infrastruktur"],
+    "html": ""
+  },
+  "12": {
+    "title": "Sachgrundlose Befristung",
+    "content": "Arbeitsverträge sollen weiterhin ohne Angabe von Gründen befristet sein dürfen.",
+    "category": ["soziales"],
+    "html": ""
+  },
+  "13": {
+    "title": "Verbot von Rüstungsexporten",
+    "content": "Rüstungsexporte aus Deutschland sollen ausnahmslos verboten werden.",
+    "category": ["wirtschaft"],
+    "html": ""
+  },
+  "14": {
+    "title": "Löschung von Fake News",
+    "content": "Betreiber von Internetseiten sollen gesetzlich dazu verpflichtet sein, Falschinformationen (Fake News) zu löschen, auf die sie hingewiesen wurden.",
+    "category": ["digitales"],
+    "html": ""
+  },
+  "15": {
+    "title": "Abschiebung",
+    "content": "Es sollte einfacher sein, Ausländer mit kriminellem Hintergrund abzuschieben",
+    "category": ["einwanderung"],
+    "html": ""
+  },
+  "16": {
+    "title": "Verhütungsmittelkostenübernahme",
+    "content": "Die gesetzlichen Krankenkassen sollten, unabhängig vom Alter des Versicherten, für Verhütungsmethoden zahlen.",
+    "category": ["gesundheit"],
+    "html": ""
+  },
+  "17": {
+    "title": "Bleiberecht bei Arbeit",
+    "content": "Wenn Flüchtlinge in Deutschland eine Arbeit finden, von der sie leben können, sollten sie bleiben dürfen, selbst wenn sich die Lage in ihrem Heimatland bessert.",
+    "category": ["einwanderung"],
+    "html": ""
+  },
+  "18": {
+    "title": "Ökologische Landwirtschaft",
+    "content": "Ökologische Landwirtschaft soll stärker gefördert werden als konventionelle Landwirtschaft.",
+    "category": ["umwelt"],
+    "html": ""
+  },
+  "19": {
+    "title": "Islam und Werteordnung",
+    "content": "Der Islam ist nicht mit der Werteordnung der Bundesrepublik vereinbar.",
+    "category": ["gesellschaft"],
+    "html": ""
+  },
+  "20": {
+    "title": "Impfpflicht",
+    "content": "Kinder sollen gegen ansteckende Krankheiten geimpft werden müssen.",
+    "category": ["gesundheit"],
+    "html": ""
+  },
+  "21": {
+    "title": "Bedingungsloses Grundeinkommen",
+    "content": "In Deutschland soll es ein bedingungsloses Grundeinkommen geben.",
+    "category": ["soziales"],
+    "html": ""
+  },
+  "22": {
+    "title": "Zusammenarbeit EU",
+    "content": "Die Zusammenarbeit der Mitgliedstaaten in der Europäischen Union soll verstärkt werden.",
+    "category": ["aussen"],
+    "html": ""
+  },
+  "23": {
+    "title": "Bundeswehr im Inneren",
+    "content": "Bei der Terrorismusbekämpfung soll die Bundeswehr im Inland eingesetzt werden dürfen.",
+    "category": ["sicherheit"],
+    "html": ""
   }
 }

@@ -7,6 +7,10 @@ import Calculator from '../Calculator.js';
 import Categories from './Categories.jsx';
 import ls from 'local-storage'
 
+const buildCurrentUrl = function() {
+  return window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
+}
+
 export default class Result extends React.Component {
   constructor(props) {
     super(props);
@@ -44,7 +48,7 @@ export default class Result extends React.Component {
     return(
       <div>
         <div class="result-container__wrapper">
-          <div className="result-container">
+          <div className="result-container category-selection">
             <CategorySelection 
               click={this.handleCategorySelect.bind(this)}
               selected={this.state.categoriesSelected}>
@@ -53,13 +57,7 @@ export default class Result extends React.Component {
         </div>
 
         <div class="result-container__wrapper">
-          <div className="result-container">
-            <div className="result-container__item">
-              Chart 1
-            </div>
-          </div>
-
-          <div className="result-container">
+          <div className="result-container bar-chart">
             <div className="result-container__item">
               <BarChart result={deviations}></BarChart>
             </div>
@@ -67,18 +65,24 @@ export default class Result extends React.Component {
         </div>
 
         <div class="result-container__wrapper">
-          <div className="result-container">
+          <div className="result-container category-chart">
             <div className="result-container__item">
               <CategoryChart result={answers_user}></CategoryChart>
             </div>
           </div>
 
-          <div className="result-container">
+          <div className="result-container party-chart">
             <div className="result-container__item">
               <PartyChart result={answers_user}></PartyChart>
             </div>
           </div>
         </div>
+
+        <div class="result-container__wrapper share">
+          <a target="_blank" class="fb" href={"https://www.facebook.com/sharer/sharer.php?u=" + buildCurrentUrl() + this.props.match.url}>Share on Facebook</a>
+          <a target="_blank" class="twitter" href={"https://twitter.com/home?status=" + buildCurrentUrl() + this.props.match.url}>Share on Twitter</a>
+        </div>
+
       </div>
     );
   }

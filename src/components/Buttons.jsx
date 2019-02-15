@@ -1,7 +1,7 @@
 import React from "react";
 
 const Buttons = ({click}) => (
-  <div className="test-buttons">
+  <div className="test-buttons antworten">
     <button className="test-button" value="2" onClick={click}>Stimme sehr zu</button>
     <button className="test-button" value="1" onClick={click}>Stimme zu</button>
     <button className="test-button" value="0" onClick={click}>Neutral</button>

@@ -14,23 +14,29 @@ const Question = ({qid, total, question, handleButton}) => {
 
   return (
     <div className="test-container">
-      <div className="test-container__wrap">
-        <div className="test-container__item question">
-          <div className="test-meta">
-            {meta}
-            <span className="test-meta__number">
-            {qid + 1} / {total}
+      <div className="test-container__wrap left-col">
+        <div className="test-container__item frage">
+          <div className="test-meta top">
+            <span className="test-meta__number fortschritt">
+              {qid + 1} / {total}
             </span>
-            
           </div>
-          <h1>{question.title || "missing"}</h1>
-          <p>{question.content || "missing"}</p>
+
+          <div class="these">
+            <div class="icon-tags"> {meta} </div>
+          </div>
+
+          <div class="text"> 
+            <h1>{question.title || "missing"}</h1>
+            <p>{question.content || "missing"}</p>
+          </div>
+
         </div>
         <Buttons click={handleButton}/>
       </div>
 
-      <div className="test-container__wrap">
-        <div className="test-container__item facts">
+      <div className="test-container__wrap right-col">
+        <div className="test-container__item factsheet">
           <div dangerouslySetInnerHTML={{__html: question.html}} />
         </div>
       </div>

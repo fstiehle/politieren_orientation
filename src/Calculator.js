@@ -73,9 +73,10 @@ export default class Calculator {
 
       // Sum deviation
       const total_deviation = deviation.reduce((a, b) => a + b, 0);
+      const length = Calculator.countNotEmpties(deviation);
 
       // Deviation in %
-      deviations[party] = Math.round( 100 - total_deviation / (entries.length * 4) * 100 );
+      deviations[party] = Math.round( 100 - total_deviation / (length * 4) * 100 );
     }
 
     // Sort for best match
@@ -108,6 +109,16 @@ export default class Calculator {
     });
 
     return answers;
+  }
+
+  static countNotEmpties(array) {
+    let i = 0;
+    array.forEach(element => {
+      if (!isNaN(element)) {
+        ++i;
+      }
+    });
+    return i;
   }
 
 }
