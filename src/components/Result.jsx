@@ -8,7 +8,7 @@ import Categories from './Categories.jsx';
 import ls from 'local-storage'
 
 const buildCurrentUrl = function() {
-  return window.location.protocol + "//" + window.location.host + "/" + window.location.pathname;
+  return window.location.protocol + "//" + window.location.host + window.location.pathname + '#';
 }
 
 export default class Result extends React.Component {

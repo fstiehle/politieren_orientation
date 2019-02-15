@@ -15,7 +15,21 @@ export default class Calculator {
     return array.reduce((a, b) => a + b);
   }
 
+  static removeNonAnswers(answers) {
+
+    answers.forEach((answer, index) => {
+
+      if ( isNaN( answer ) ) {
+        delete answers[index];
+      }
+ 
+    });
+
+    return answers;
+  }
+
   static calculateDeviation(answers_user, answers_party) {
+    answers_user = Calculator.removeNonAnswers( answers_user );
     const result = [];
     answers_user.forEach( ( answer, index ) => {
       result[index] = Math.abs( answers_party[index] - answer );
