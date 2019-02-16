@@ -61,6 +61,7 @@ export default class Result extends React.Component {
         <div class="result-container__wrapper">
           <div className="result-container bar-chart">
             <div className="result-container__item">
+              <h2>Übereinstimmung mit den Ansichten der Parteien</h2>
               <BarChart result={deviations}></BarChart>
             </div>
           </div>

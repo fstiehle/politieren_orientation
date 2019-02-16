@@ -9,14 +9,14 @@ const party_colors = {
   'CDU' : '#000000',
   'FDP' : '#FFED00',
   'GRÜNE' : '#46962B',
-  'LINKE' : '#E20613',
+  'LINKE' : '#d83295',
   'SPD' : '#E2001A'
 }
 
 const horizontalBarChartData = {
   labels: [],
   datasets: [{
-    label: 'Übereinstimmung %',
+    label: 'Übereinstimmung in %',
     backgroundColor: [],
     borderWidth: 0,
     data: [ ]
@@ -57,10 +57,17 @@ export default class Result extends React.Component {
         data={this.getChartData(this.props.result)}
         options={{ scales: { xAxes: [{
           ticks: {
-              beginAtZero: true
+            beginAtZero: true
           }}]},
-          'legend': { onClick: () => {} }
-          }}>
+          'legend': { onClick: () => {}, display: false },
+          tooltips: {
+            callbacks: {
+              label: (tooltipItem, data) => {
+                return ' ' + tooltipItem.xLabel + '%';
+              }
+            }
+          } 
+        }}>
         </HorizontalBar>
     );
   }
